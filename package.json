@@ -9,7 +9,7 @@
     "build": "nest build",
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.ts\" \"typings/**/*.ts\"",
-    "start": "nest start",
+    "start": "node dist/app",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -22,14 +22,22 @@
   },
   "dependencies": {
     "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
-    "nanoid": "^4.0.0",
+    "@nestjs/typeorm": "^9.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
+    "compression": "^1.7.4",
+    "helmet": "^6.0.1",
+    "nanoid": "3.3.4",
     "nestjs-pino": "^3.1.2",
+    "pg": "^8.8.0",
     "pino": "^8.8.0",
     "pino-http": "^8.3.1",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "typeorm": "^0.3.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
